@@ -1,0 +1,83 @@
+@import '../utils/mixins';
+@import '../utils/variables';
+
+
+footer {
+    background-color: $darkgrey;
+    padding: 22px 25px;
+
+    @include desktop {
+        padding: 30px 45px;
+    }
+
+    .content {
+        @include desktop {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: flex-end;
+        }
+
+        .logo__footer {
+            margin-bottom: 20px;
+
+            @include desktop {
+                margin: 0;
+            }
+
+            svg {
+                width: 140px;
+
+                @include desktop {
+                    width: 130px;
+                    vertical-align: bottom;
+                }
+
+                path {
+                    fill: $white;
+                }  
+            }
+        }
+
+        .ml {
+            @include desktop {
+                margin-right: 75px;
+            }
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                @include desktop {
+                    flex-direction: row;
+                }
+
+                li {
+                    @include desktop {
+                        gap: 10px;
+
+                        &:nth-child(2) {
+                            margin-right: 35px;
+                        }
+                    }
+
+                    .picto__footer {
+                        margin-right: 15px;
+                        color: $white;
+                        width: 13px;
+                    } 
+
+
+                    a {
+                        color: $white;
+
+                        &.bold {
+                            font-weight: 500;
+
+                        } 
+                    }
+                }
+            }
+        }
+    }
+}

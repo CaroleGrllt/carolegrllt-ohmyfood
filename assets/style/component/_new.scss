@@ -1,0 +1,18 @@
+@import '../utils/mixins';
+@import '../utils/variables';
+
+.new {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-color: $mint;
+    border-radius: 2px;
+    padding: 5px 10px;
+
+
+    span {
+        color: $green;
+        font-size: 14px;
+        font-weight: 500;
+    }
+}

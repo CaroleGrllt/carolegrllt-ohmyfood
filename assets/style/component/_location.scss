@@ -1,0 +1,29 @@
+@import '../utils/mixins';
+@import '../utils/variables';
+
+.location__content {
+    background-color: $lightgrey;
+    display: flex;
+    justify-content: center;
+    padding: 15.5px 0;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 4px 0px inset;
+
+    @include desktop {
+        box-shadow: none;
+    }
+    
+    .location__content__picto {
+        padding-right: 17px;
+
+        .fa-location-dot {
+            color: $darkgrey;
+        }
+    }
+
+    .location__content__city {
+        span {
+            font-weight: 500;
+            color: $darkgrey;
+        }
+    }
+}
